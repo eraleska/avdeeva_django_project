@@ -1,0 +1,26 @@
+{% extends 'forum/layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="background-color:	#C0C0C0">
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  {%if news_list%}
+  {% for el in news_list %}
+  <div class="col">
+    <div class="card border-dark mb-3" style="width: 18rem; background-color:#E8E8E8">
+      <div class="card-body" style="color:#034769">
+        <h5 class="card-title">{{el.name}}</h5>
+        <p class="card-text">{{el.description}}</p>
+        <a href="#" class="btn btn-outline-warning" role="button">Подробнее</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <div class="alert alert-warning" role="alert">
+  Статьи отсутствуют
+  </div>
+  {% endif %}
+</div>
+</div>
+{% endblock %}

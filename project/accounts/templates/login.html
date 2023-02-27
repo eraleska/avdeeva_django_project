@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/signup-signin.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">Войти в аккаунт</h1>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <hr>
+            <input type="submit" class="registerbtn">
+        </form>
+    </div>
+    <div class="container signin">
+        <p>Создайте новый аккаунт <a href="/accounts/register">Зарегистрироваться</a></p>
+    </div>
+</body>
+</html>
