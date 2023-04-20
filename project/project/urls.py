@@ -24,4 +24,5 @@ urlpatterns = [
     path('forum/', include('forum.urls')),
     path('', include('main.urls')),
     path('accounts/', include('accounts.urls')),
+    path('notes/', include('notes.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
